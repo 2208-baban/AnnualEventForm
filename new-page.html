@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Submission Successful !!!</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<!-- Bootstrap CSS -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+	<style>
+body {
+  background-color: #f8f9fa;
+  font-family: Arial, sans-serif;
+}
+
+.container {
+  margin-top: 50px;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+}
+
+h1 {
+  text-align: center;
+  font-size: 3rem;
+  margin-bottom: 20px;
+  color: #007bff;
+}
+
+form {
+  margin-top: 30px;
+}
+
+label {
+  font-weight: bold;
+  color: #343a40;
+}
+
+input[type="text"], input[type="email"], input[type="number"] {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ced4da;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+button[type="submit"] {
+  background-color: #007bff;
+  color: #fff;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+button[type="submit"]:hover {
+  background-color: #0062cc;
+}
+
+ul {
+  margin-top: 20px;
+  list-style-type: none;
+  padding: 0;
+}
+
+li {
+  margin-bottom: 10px;
+}
+
+span {
+  font-weight: bold;
+  color: #dc3545;
+}
+	  </style>
+</head>
+<body>
+
+	<div class="container">
+		<h1>Submission Successful !!! </h1>
+		<p>This is what you submitted:</p>
+		<ul>
+			<li>Team Name: <span id="teamname"></span></li>
+			<li>Co-ordinator Name: <span id="cordinatorname"></span></li>
+			<li>Email: <span id="email"></span></li>
+			<li>Mobile No: <span id="number"></span></li>
+			<li>College Name: <span id="collegename"></span></li>
+		</ul>
+	</div>
+
+	<!-- Bootstrap JS -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+
+	<!-- JavaScript -->
+	<script>
+		// Retrieve form data from localStorage
+		var teamname = localStorage.getItem("teamname");
+		var cordinatorname = localStorage.getItem("cordinatorname");
+		var email = localStorage.getItem("email");
+		var number = localStorage.getItem("number");
+		var collegename = localStorage.getItem("collegename");
+
+		// Update HTML with form data
+	document.getElementById("teamname").innerHTML = teamname;
+	document.getElementById("cordinatorname").innerHTML = cordinatorname;
+	document.getElementById("email").innerHTML = email;
+	document.getElementById("number").innerHTML = number;
+	document.getElementById("collegename").innerHTML = collegename;
+
+	// Clear localStorage
+	localStorage.clear();
+</script>
+</body>
+</html>

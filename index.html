@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>InfoFest 2K23 Registration Form</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<!-- Bootstrap CSS -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+
+	<style>
+		body {
+	background-color: #f8f9fa;
+	font-family: Arial, sans-serif;
+}
+
+h1 {
+	color: #e83e8c;
+	text-align: center;
+	margin-top: 30px;
+}
+
+label {
+	color: #007bff;
+	font-weight: bold;
+}
+
+.form-control {
+	border-radius: 10px;
+	border-color: #007bff;
+	box-shadow: none;
+}
+
+.btn-primary {
+	background-color: #ff7f50;
+	border-color: #ff7f50;
+	border-radius: 10px;
+	font-weight: bold;
+	margin-top: 20px;
+	margin-bottom: 50px;
+}
+
+.btn-primary:hover {
+	background-color: #ff6347;
+	border-color: #ff6347;
+}
+	</style>
+</head>
+<body>
+
+	<div class="container">
+		<h1>InfoFest 2K23 Registration Form</h1>
+		<form id="myForm" onsubmit="return handleSubmit()">
+			<div class="form-group">
+                <label for="teamname">Team Name:</label>
+				<input type="text" class="form-control" id="teamname" placeholder="Enter team name" required>
+            </div>
+            <div class="form-group">
+                <label for="cordinatorname">Co-ordinator Name:</label>
+				<input type="text" class="form-control" id="cordinatorname" placeholder="Enter co-ordinator name" required>
+			</div>
+			<div class="form-group">
+				<label for="email">Email address:</label>
+				<input type="email" class="form-control" id="email" placeholder="Enter email" required>
+			</div>
+            <div class="form-group">
+				<label for="mobileno">Mobile No:</label>
+				<input type="number" class="form-control" id="number" placeholder="Enter mobile no." required>
+			</div>
+            <div class="form-group">
+                <label for="collegename">College Name:</label>
+				<input type="text" class="form-control" id="collegename" placeholder="Enter college name" required>
+			</div>
+			<button type="submit" class="btn btn-primary">Submit</button>
+		</form>
+	</div>
+
+	<!-- Bootstrap JS -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+
+	<!-- JavaScript -->
+	<script>
+		function handleSubmit() {
+			// Get form values
+            var teamname = document.getElementById("teamname").value;
+			var cordinatorname = document.getElementById("cordinatorname").value;
+			var email = document.getElementById("email").value;
+            var number = document.getElementById("number").value;
+            var collegename = document.getElementById("collegename").value;
+			// Save form values to localStorage
+			localStorage.setItem("teamname", teamname);
+            localStorage.setItem("cordinatorname", cordinatorname);
+			localStorage.setItem("email", email);
+            localStorage.setItem("number", number);
+            localStorage.setItem("collegename", collegename);
+			// Redirect to new page
+			window.location.href = "new-page.html";
+
+			// Prevent form submission
+			return false;
+		}
+	</script>
+</body>
+</html>
